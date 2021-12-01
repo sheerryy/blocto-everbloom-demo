@@ -1,8 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import * as fcl from "@onflow/fcl";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+fcl.config()
+  .put("accessNode.api", "https://flow-access-mainnet.portto.io") // connect to Flow testnet
+  .put("challenge.handshake", "https://flow-wallet.blocto.app/authn") // use Blocto testnet wallet
 
 ReactDOM.render(
   <React.StrictMode>
